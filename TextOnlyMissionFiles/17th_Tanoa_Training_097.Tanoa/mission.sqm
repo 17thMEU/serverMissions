@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=292;
+		nextID=293;
 	};
 	class MarkerIDProvider
 	{
@@ -67,13 +67,14 @@ addons[]=
 	"ace_rearm",
 	"ace_refuel",
 	"CUP_Buildings_Config",
-	"A3_Air_F_Jets_Plane_Fighter_01"
+	"A3_Air_F_Jets_Plane_Fighter_01",
+	"A3_Modules_F_Curator_Curator"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=41;
+		items=42;
 		class Item0
 		{
 			className="JS_JC_FA18";
@@ -348,6 +349,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item41
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=10012253;
@@ -496,7 +504,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=139;
+		items=140;
 		class Item0
 		{
 			dataType="Object";
@@ -512,7 +520,7 @@ class Mission
 			};
 			id=2;
 			type="JS_JC_FA18F";
-			atlOffset=0.019797802;
+			atlOffset=0.026103735;
 		};
 		class Item1
 		{
@@ -529,7 +537,7 @@ class Mission
 			};
 			id=3;
 			type="JS_JC_FA18F";
-			atlOffset=9.5367432e-007;
+			atlOffset=0.026103973;
 		};
 		class Item2
 		{
@@ -537,7 +545,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6923.5503,9.5079727,7471.3159};
-				angles[]={-0,1.386935,0};
+				angles[]={0,1.386935,0};
 			};
 			side="Empty";
 			flags=4;
@@ -546,6 +554,7 @@ class Mission
 			};
 			id=5;
 			type="B_T_VTOL_01_infantry_F";
+			atlOffset=2.3841858e-007;
 		};
 		class Item3
 		{
@@ -1247,6 +1256,7 @@ class Mission
 			};
 			id=61;
 			type="DAR_M115_MK19Woodland";
+			atlOffset=2.3841858e-007;
 		};
 		class Item45
 		{
@@ -14666,7 +14676,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6919.5835,2.761122,7390.3057};
-				angles[]={-0,1.40293,0};
+				angles[]={0,1.40293,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14684,7 +14694,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6920.2891,2.7611241,7386.4497};
-				angles[]={-0,1.40293,0};
+				angles[]={0,1.40293,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14701,7 +14711,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6920.8872,2.7611241,7383.1323};
-				angles[]={-0,1.40293,0};
+				angles[]={0,1.40293,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14718,7 +14728,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6921.439,2.7611241,7379.5513};
-				angles[]={-0,1.40293,0};
+				angles[]={0,1.40293,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14927,7 +14937,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6948.7354,9.5079727,7346.3726};
-				angles[]={-0,1.3720375,0};
+				angles[]={0,1.3720375,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14939,6 +14949,98 @@ class Mission
 			};
 			id=291;
 			type="B_T_VTOL_01_vehicle_F";
+			atlOffset=2.3841858e-007;
+		};
+		class Item139
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7129.5269,0.027680397,6869.1001};
+			};
+			id=292;
+			type="ModuleCurator_F";
+			atlOffset=8.3190002;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 	class Connections
